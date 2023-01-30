@@ -13,18 +13,18 @@
 <div class="jumbotron">
   <h1 class="display-4" th:text="${totalReportedCases}"></h1>
   <p class="lead">Total cases reported as of today</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  <p><a class="btn btn-primary btn-lg" href="https://www.worldometers.info/coronavirus/" role="button">Learn more</a></p>
 </div>
 <table class="table">
   <tr>
-  <th>State</th>
-  <th>Country</th>
-  <th>Total cases reported</th>
+    <th>Country</th>
+    <th>State</th>
+    <th>Total cases reported</th>
   </tr>
   <tr th:each="locationStat : ${locationstats}">
-  <td th:text="${locationStat.state}"></td>
-  <td th:text="${locationStat.country}"></td>
-  <td th:text="${locationStat.latestTotalCases}">0</td>
+    <td th:text="${locationStat.country}"></td>
+    <td th:text="${locationStat.state}"></td>
+    <td th:text="${locationStat.latestTotalCases}"></td>
 </tr>
 </table>
 </div>
